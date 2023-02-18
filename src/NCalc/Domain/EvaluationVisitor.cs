@@ -195,23 +195,23 @@ namespace NCalc.Domain
                     break;
 
                 case BinaryExpressionType.BitwiseAnd:
-                    Result = Convert.ToUInt16(left(), _cultureInfo) & Convert.ToUInt16(right(), _cultureInfo);
+                    Result = Convert.ToInt32(left(), _cultureInfo) & Convert.ToInt32(right(), _cultureInfo);
                     break;
 
                 case BinaryExpressionType.BitwiseOr:
-                    Result = Convert.ToUInt16(left(), _cultureInfo) | Convert.ToUInt16(right(), _cultureInfo);
+                    Result = Convert.ToInt32(left(), _cultureInfo) | Convert.ToInt32(right(), _cultureInfo);
                     break;
 
                 case BinaryExpressionType.BitwiseXOr:
-                    Result = Convert.ToUInt16(left(), _cultureInfo) ^ Convert.ToUInt16(right(), _cultureInfo);
+                    Result = Convert.ToInt32(left(), _cultureInfo) ^ Convert.ToInt32(right(), _cultureInfo);
                     break;
 
                 case BinaryExpressionType.LeftShift:
-                    Result = Convert.ToUInt16(left(), _cultureInfo) << Convert.ToUInt16(right(), _cultureInfo);
+                    Result = Convert.ToInt32(left(), _cultureInfo) << Convert.ToInt32(right(), _cultureInfo);
                     break;
 
                 case BinaryExpressionType.RightShift:
-                    Result = Convert.ToUInt16(left(), _cultureInfo) >> Convert.ToUInt16(right(), _cultureInfo);
+                    Result = Convert.ToInt32(left(), _cultureInfo) >> Convert.ToInt32(right(), _cultureInfo);
                     break;
 
                 case BinaryExpressionType.Exponentiation:
@@ -236,7 +236,7 @@ namespace NCalc.Domain
                     break;
 
                 case UnaryExpressionType.BitwiseNot:
-                    Result = ~Convert.ToUInt16(Result, _cultureInfo);
+                    Result = ~Convert.ToUInt64(Result, _cultureInfo);
                     break;
 
                 case UnaryExpressionType.Positive:
